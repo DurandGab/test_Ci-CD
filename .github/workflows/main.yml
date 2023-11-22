@@ -2,7 +2,7 @@ name : nomWorkFlow
 
 on:
   push:
-    branches: [main]
+    branches: ["main"]
 jobs:
   monJob:
     runs-on: ubuntu-latest
@@ -12,7 +12,7 @@ jobs:
       - name: continous
         run : echo "workflow lancé"
       - name : intégration
-        run : 
+        run : | 
           sudo apt-get update
           sudo apt-get install -y nginx
           ls -a
