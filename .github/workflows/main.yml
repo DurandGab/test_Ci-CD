@@ -1,0 +1,18 @@
+name : nomWorkFlow
+
+on:
+  push:
+    branches: [main]
+jobs:
+  monJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: vérification
+        uses: actions/checkout@v4
+      - name: continous
+        run : echo "workflow lancé"
+      - name : intégration
+        run : 
+          sudo apt-get update
+          sudo apt-get install -y nginx
+          ls -a
